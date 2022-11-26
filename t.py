@@ -3,7 +3,7 @@ import os, sys, time, random, threading, urllib.request, colorama
 from colorama import *
 colorama.init(autoreset=True)
 
-user ='admin'
+user =''
 username=input(Fore.MAGENTA + '''
                                                                                   
 UUUUUUUU     UUUUUUUU   SSSSSSSSSSSSSSS EEEEEEEEEEEEEEEEEEEEEERRRRRRRRRRRRRRRRR   
